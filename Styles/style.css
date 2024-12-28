@@ -26,7 +26,7 @@ a{
 
 /* Sección de inicio */
 #inicio {
-    background-color: #1c1c1c; /* Negro suave */
+    background-color: #1c1c1c; 
     color: #ffffff;
     text-align: center;
     padding: 50px 20px;
@@ -55,56 +55,90 @@ a{
 }
 
 /* Sección de proyectos */
-.portfolio{
-    background-color: #1c1c1c;
-    color: #fff;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    container-name: portfolio;
-    container-type: inline-size;
-    justify-content: space-evenly;
+.portfolio__project {
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+    background-color: #1e1e2f; /* Color base para el fondo */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    height: 300px; /* Ajusta el alto del contenedor */
 }
 
-.portfolio__title{
-    font-size: 2rem;
-    margin-bottom: 0;
+.portfolio__project:hover {
+    transform: scale(1.05);
 }
 
-.portfolio__project-container{
-    display: grid;
-    grid-template-columns: 1fr;
-    max-width: 1000px;
-    margin: auto;
+.portfolio__image {
+    position: absolute;
+    top: 0; 
+    left: 0;
     width: 100%;
-    gap: 12px;
-    padding: 12px;
-    min-height: 88vh;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease; 
+    opacity: 0; 
+    z-index: 0;
 }
 
-.portfolio__project{
-    background-image: linear-gradient(#0009,#0009),url("../Img/Ojos.jpg");
-    background-position: center;
-    background-size: cover;
-    display: grid;
-    place-content: center;
-    border-radius: 8px;
-    animation: aparecer both;
-    animation-timeline: view();
-    animation-range: cover 5% cover 40%;
+.portfolio__project:hover .portfolio__image {
+    opacity: 1;
 }
 
-.portfolio__project:hover{
-    opacity: 0.74;
-    outline: 2px solid #fff7;
+.portfolio__image img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+    border-radius: 5px; 
+}
+
+.portfolio__project-name {
+    position: relative;
+    z-index: 1; 
+    color: white;
+    font-size: 1.5rem;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    margin: 0;
+    transition: transform 0.3s ease;
+}
+
+.portfolio__project-link {
+    display: block; 
+    height: 100%; 
+    position: relative;
+    z-index: 2;
+}
+
+.portfolio__project:hover .portfolio__project-name {
+    transform: translateY(-100%); 
+}
+
+.portfolio__project-description {
+    font-size: 1rem;
+    color: white;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    margin: 10px 0;
+    display: none; 
+}
+
+.portfolio__project:hover .portfolio__project-description {
+    display: block; 
 }
 
 /* Sección Sobre Mí */
 #sobre-mi {
     margin-top: 40px;
     padding: 20px;
-    background-color: #181818; /* Fondo negro suave */
+    background-color: #181818; 
     border-left: 4px solid #00aaff;
 }
 
