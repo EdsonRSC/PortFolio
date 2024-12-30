@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     color: #f0f0f0;
-    background-color: #121212; /* Fondo oscuro */
+    background-color: #121212; 
     line-height: 1.6;
 }
 
@@ -14,9 +14,8 @@ body {
     padding: 20px;
 }
 
-/* Encabezados */
 h1, h2 {
-    color: #00aaff; /* Azul llamativo */
+    color: #00aaff; 
     text-align: center;
 }
 
@@ -59,11 +58,11 @@ a{
     margin: 10px;
     position: relative;
     overflow: hidden;
-    background-color: #1e1e2f; /* Color base para el fondo */
+    background-color: #1e1e2f;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
-    height: 300px; /* Ajusta el alto del contenedor */
+    height: 300px;
 }
 
 .portfolio__project:hover {
@@ -72,7 +71,7 @@ a{
 
 .portfolio__image {
     position: absolute;
-    top: 0; 
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
@@ -80,8 +79,8 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: opacity 0.3s ease; 
-    opacity: 0; 
+    transition: opacity 0.3s ease;
+    opacity: 0;
     z-index: 0;
 }
 
@@ -90,15 +89,17 @@ a{
 }
 
 .portfolio__image img {
-    width: 100%; 
-    height: 100%; 
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    border-radius: 5px; 
+    border-radius: 5px;
 }
 
 .portfolio__project-name {
-    position: relative;
-    z-index: 1; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: white;
     font-size: 1.5rem;
     padding: 10px;
@@ -106,18 +107,14 @@ a{
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 5px;
     margin: 0;
-    transition: transform 0.3s ease;
-}
-
-.portfolio__project-link {
-    display: block; 
-    height: 100%; 
-    position: relative;
-    z-index: 2;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1; 
+    opacity: 1;
 }
 
 .portfolio__project:hover .portfolio__project-name {
-    transform: translateY(-100%); 
+    opacity: 0;
+    transform: translate(-50%, -50%);
 }
 
 .portfolio__project-description {
@@ -127,11 +124,22 @@ a{
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 5px;
     margin: 10px 0;
-    display: none; 
+    display: none;
 }
 
 .portfolio__project:hover .portfolio__project-description {
-    display: block; 
+    display: block;
+}
+
+.portfolio__project-link {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    text-decoration: none;
 }
 
 /* Sección Sobre Mí */
