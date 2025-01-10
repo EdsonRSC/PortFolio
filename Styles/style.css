@@ -9,7 +9,7 @@ body {
 }
 
 .content {
-    max-width: 1200px;
+    max-width: 960px; 
     margin: 0 auto;
     padding: 20px;
 }
@@ -34,8 +34,8 @@ a{
 .foto-perfil {
     display: block;
     margin: 20px auto; 
-    width: 300px; 
-    height: 300px; 
+    width: 200px; 
+    height: 200px; 
     border-radius: 50%; 
     object-fit: cover; 
     border: 3px solid #00aaff;
@@ -62,7 +62,7 @@ a{
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
-    height: 300px;
+    height: 250px;
 }
 
 .portfolio__project:hover {
@@ -101,7 +101,7 @@ a{
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     padding: 10px;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.7);
@@ -118,7 +118,7 @@ a{
 }
 
 .portfolio__project-description {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: white;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.7);
@@ -156,14 +156,15 @@ a{
     padding: 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
+    gap: 10px;
 }
 
 #skills li {
     background-color: #1f1f1f;
     border: 1px solid #2c2c2c;
     border-radius: 8px;
-    padding: 15px;
+    padding: 10px;
+    font-size: 0.9em;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -186,20 +187,11 @@ a{
 #contacto a {
     color: #00aaff;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 #contacto a:hover {
     color: #f0f0f0;
 }
 
-/* Footer */
-footer {
-    background-color: #181818;
-    color: #ffffff;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 40px;
-    font-size: 0.9em;
-    border-top: 3px solid #00aaff;
-}
+
