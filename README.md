@@ -2,7 +2,7 @@
 ¡Bienvenido a mi portafolio web! Este proyecto recopila mis conocimientos, habilidades y proyectos destacados como desarrollador web en formación. Aquí podrás explorar mi trabajo y conocer un poco más sobre mí.
 
 ## Acceso al Portafolio
-Puedes visitar mi portafolio en línea aquí: [Portafolio Web](https://edsonrsc.github.io/)
+Puedes visitar mi portafolio en línea aquí: [Portafolio Web](https://edsonrsc.github.io/PortFolio/)
 
 ---
 
